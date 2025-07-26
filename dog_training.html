@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周林犷训狗记</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .scene {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .character {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .person {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .dog {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(231, 76, 60, 0.3);
+            margin: 10px 0;
+        }
+
+        .dog.far-dog {
+            background: linear-gradient(45deg, #f39c12, #e67e22);
+            box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+        }
+
+        .dog.forest-dog {
+            background: linear-gradient(45deg, #27ae60, #229954);
+            box-shadow: 0 10px 20px rgba(39, 174, 96, 0.3);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .name {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .training-area {
+            background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .training-commands {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .command {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .command:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .command-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .command-desc {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2ecc71, #27ae60);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        .far-dog .progress-fill {
+            background: linear-gradient(90deg, #f39c12, #e67e22);
+        }
+
+        .forest-dog .progress-fill {
+            background: linear-gradient(90deg, #27ae60, #229954);
+        }
+
+        @media (max-width: 768px) {
+            .scene {
+                flex-direction: column;
+            }
+
+            .character {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🐕 周林犷训狗记 🐕</h1>
+
+        <div class="training-area">
+            <h2>🏟️ 训练场地</h2>
+            <p>周林犷正在专业训练场地上训练他的两只爱犬</p>
+        </div>
+
+        <div class="scene">
+            <div class="character">
+                <div class="person">
+                    <div class="avatar">👨</div>
+                    <div class="name">周林犷</div>
+                    <div class="status">专业训犬师</div>
+                    <div class="status">正在训练中...</div>
+                </div>
+            </div>
+
+            <div class="character">
+                <div class="dog far-dog">
+                    <div class="avatar">🐕</div>
+                    <div class="name">远狗</div>
+                    <div class="status">金毛寻回犬</div>
+                    <div class="status">训练进度</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;"></div>
+                    </div>
+                    <div class="status">75% 完成</div>
+                </div>
+            </div>
+
+            <div class="character">
+                <div class="dog forest-dog">
+                    <div class="avatar">🐕</div>
+                    <div class="name">森狗</div>
+                    <div class="status">德国牧羊犬</div>
+                    <div class="status">训练进度</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="status">85% 完成</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="training-area">
+            <h3>🎯 当前训练项目</h3>
+            <div class="training-commands">
+                <div class="command">
+                    <div class="command-name">坐下 (Sit)</div>
+                    <div class="command-desc">远狗：✅ 已掌握<br>森狗：✅ 已掌握</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">趴下 (Down)</div>
+                    <div class="command-desc">远狗：✅ 已掌握<br>森狗：✅ 已掌握</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">过来 (Come)</div>
+                    <div class="command-desc">远狗：🔄 训练中<br>森狗：✅ 已掌握</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">等待 (Stay)</div>
+                    <div class="command-desc">远狗：🔄 训练中<br>森狗：✅ 已掌握</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">握手 (Shake)</div>
+                    <div class="command-desc">远狗：🔄 训练中<br>森狗：🔄 训练中</div>
+                </div>
+                <div class="command">
+                    <div class="command-name">翻滚 (Roll)</div>
+                    <div class="command-desc">远狗：⏳ 待训练<br>森狗：🔄 训练中</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="training-area">
+            <h3>📝 训练日志</h3>
+            <p><strong>今日训练重点：</strong>周林犷正在重点训练远狗的"过来"指令和森狗的"翻滚"技巧。两只狗都表现得很专注，训练氛围非常融洽。</p>
+            <p><strong>训练时间：</strong>上午 9:00 - 11:00</p>
+            <p><strong>训练地点：</strong>专业犬类训练中心</p>
+        </div>
+    </div>
+</body>
+
+</html>
